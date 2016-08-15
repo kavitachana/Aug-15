@@ -33,6 +33,8 @@ public class CountriesApp {
 		this.menuOptions(userChoice); 			// call menu options and send menu choice
 
 		newRun();
+		
+		sc.close();
 	}
 
 	public void menuOptions(int menuChoice) {
@@ -59,7 +61,8 @@ public class CountriesApp {
 			break;
 		}
 	}
-
+	
+	
 	public int getUserChoice() {
 		return userChoice;
 	}

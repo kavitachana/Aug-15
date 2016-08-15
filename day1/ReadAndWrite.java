@@ -19,11 +19,13 @@ public class ReadAndWrite {
 			while ((countryName = in.readLine()) != null) {
 				countryList.add(countryName); 		// add country from file to arraylist
 				System.out.println(countryName);
-			}
+			
+			} in.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public void write(String addACountry) { 	// pass in user input county name
@@ -31,6 +33,8 @@ public class ReadAndWrite {
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(aNewFile, true)))) {
 			out.println(addACountry);
 
+			out.close();
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
